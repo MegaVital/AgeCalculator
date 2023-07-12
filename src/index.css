@@ -17,26 +17,10 @@
         }
      }
 
-    button:hover svg path{
+    button:hover path{
  transition-property: fill;
   transition-duration: 0s;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) 10s
 }
-button:active path{
-   transform: scale(0.95);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: .5;
-  }
-}
-
 button:hover svg path{
   fill: black !important;
 }
