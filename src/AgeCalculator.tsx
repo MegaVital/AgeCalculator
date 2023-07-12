@@ -35,7 +35,6 @@ export const AgeCalculator: FC<AgeCalculatorProps> = () => {
     })
   }
 
-  console.log(date);
   const calculateDate = () => {
     if (date.day === '') return setError({ ...error, day: "This field is required" })
     if (date.month === '') return setError({ ...error, month: "This field is required" })
@@ -74,9 +73,9 @@ export const AgeCalculator: FC<AgeCalculatorProps> = () => {
 
   return (
     <div className='bg-bg w-screen h-screen  flex items-center justify-center'>
-      <div className='lg:w-843 h-560 sm:w-92vw rounded-tr-large rounded-l-large rounded-br-full bg-white '>
-        <div className='lg:ml-14 lg:mt-15 sm:mt-14 sm:mb-8 flex flex-row sm:items-center sm:justify-center'>
-          <div className=' flex flex-row '>
+      <div className='lg:w-843 lg:h-650 sm:h-486 sm:w-92vw rounded-tr-large rounded-l-large rounded-br-full bg-white '>
+        <div className='lg:ml-14 lg:mt-14 sm:mt-12 sm:mb-8  flex flex-row sm:items-center sm:justify-center'>
+          <div className='flex flex-row '>
             <div className="lg:mr-7.5 ">
               <label className={`block lg:text-xs sm:text-sm font-extrabold ${!error.day ? 'text-neutral-500' : 'text-red-500'} uppercase tracking-widest`}>
                 day
@@ -87,7 +86,7 @@ export const AgeCalculator: FC<AgeCalculatorProps> = () => {
                     onFocus={() => setError({ ...error, day: "" })}
                     type="number"
                     id="day"
-                    className="lg:w-160 sm:w-24 lg:h-72 sm:h-14 block flex-1 select-none border-0 bg-transparent outline-violet placeholder:text-neutral-500 py-1.5 lg:pl-6 sm:pl-4"
+                    className="lg:w-160 sm:w-24 lg:h-72 sm:h-13 block flex-1 select-none border-0 bg-transparent outline-violet placeholder:text-neutral-500 py-1.5 lg:pl-6 sm:pl-4"
                     placeholder='DD'
                     onChange={(event) => handleDate(event.target.value, 'day')}
                     value={(date.day) ? date.day : ''}
@@ -106,7 +105,7 @@ export const AgeCalculator: FC<AgeCalculatorProps> = () => {
                     onFocus={() => setError({ ...error, month: "" })}
                     type="number"
                     id="month"
-                    className="lg:w-160 sm:w-24 lg:h-72 sm:h-14 block flex-1 select-none border-0 bg-transparent outline-violet placeholder:text-neutral-500 py-1.5 lg:pl-6 sm:pl-4"
+                    className="lg:w-160 sm:w-24 lg:h-72 sm:h-13 block flex-1 select-none border-0 bg-transparent outline-violet placeholder:text-neutral-500 py-1.5 lg:pl-6 sm:pl-4"
                     placeholder='MM'
                     onChange={(event) => handleDate(event.target.value, 'month')}
                     value={(date.month) ? date.month : ''}
@@ -125,7 +124,7 @@ export const AgeCalculator: FC<AgeCalculatorProps> = () => {
                     onFocus={() => setError({ ...error, year: "" })}
                     type="number"
                     id="year"
-                    className="lg:w-160 sm:w-24 lg:h-72 sm:h-14 block flex-1 select-none border-0 bg-transparent outline-violet placeholder:text-neutral-500 py-1.5 lg:pl-6 sm:pl-4"
+                    className="lg:w-160 sm:w-24 lg:h-72 sm:h-13 block flex-1 select-none border-0 bg-transparent outline-violet placeholder:text-neutral-500 py-1.5 lg:pl-6 sm:pl-4"
                     placeholder='YYYY'
                     onChange={(event) => handleDate(event.target.value, 'year')}
                     value={(date.year) ? date.year : ''}
@@ -136,7 +135,7 @@ export const AgeCalculator: FC<AgeCalculatorProps> = () => {
             </div>
           </div>
         </div>
-        <div className="relative flex lg:mx-14 sm:mx-12 lg:mb-20 items-center lg:justify-end">
+        <div className="relative flex lg:mx-14 sm:mx-8 lg:mb-4 sm:mb-7 items-center lg:justify-end">
           <div className="flex-grow border-t border-gray-900/10"></div>
           <button className='flex items-center justify-center h-24 w-24 bg-violet hover:bg-black rounded-full sm:hidden' onClick={() => calculateDate()}>
             <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="#864cff" stroke="#FFF" strokeWidth="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" /></g></svg>
@@ -146,7 +145,7 @@ export const AgeCalculator: FC<AgeCalculatorProps> = () => {
           </button>
           <div className="flex-grow border-t border-gray-900/10 lg:hidden"></div>
         </div>
-        <span className='ml-14 italic font-extrabold text-neutral-950 flex flex-col lg:leading-[6rem] absolute lg:top-45% sm:top-47%'>
+        <span className='lg:ml-14 sm:ml-6 italic font-extrabold text-neutral-950 flex flex-col lg:leading-[6.7rem] sm:leading-[4.2rem]'>
           <span className='flex flex-row'>
             {!button ?
               <p className='text-violet sm:text-5xl lg:text-9xl'>--</p>
