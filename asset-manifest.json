@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AgeCalculator/static/css/main.53c570bb.css",
+    "main.js": "/AgeCalculator/static/js/main.2dd8ad00.js",
+    "static/js/787.aa599e92.chunk.js": "/AgeCalculator/static/js/787.aa599e92.chunk.js",
+    "index.html": "/AgeCalculator/index.html",
+    "main.53c570bb.css.map": "/AgeCalculator/static/css/main.53c570bb.css.map",
+    "main.2dd8ad00.js.map": "/AgeCalculator/static/js/main.2dd8ad00.js.map",
+    "787.aa599e92.chunk.js.map": "/AgeCalculator/static/js/787.aa599e92.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53c570bb.css",
+    "static/js/main.2dd8ad00.js"
+  ]
+}
